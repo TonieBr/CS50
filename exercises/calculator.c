@@ -3,9 +3,8 @@
 
 int main(void)
 {
-    long x = get_long("x: ");
-    long y = get_long("y: ");
-    float z = (float) x / (float) y;
+    int x = get_int("x: ");
+    int y = get_int("y: ");
 
-    printf("%.2f\n", z);
+    printf("%i\n", x + y);
 }
