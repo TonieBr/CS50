@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+<table id = "overview" class="table">
+    <th>Stock</th><th>Amount of Stocks</th><th>Price per Stocks</th><th>Total Value</th>
+
+    {% for row in portfolio %}
+    <tr><td>{{ row['symbol'] }} </td><td>{{ row['amount'] }}</td> <td>{{ ((lookup(row['symbol']))['price']) | usd }}</td><td>{{ ((lookup(row['symbol']))['price'] * row['amount']) | usd}} </td></tr>
+
+    {% endfor %}
+
+</table>
+
+Cash on hand: {{ cash | usd }}<br>
+Total Worth: {{ (cash + counter) | usd}}
+
+<br><br>
+<form action="/" method="post">
+<input type="text" name="money" placeholder="Money">
+<button type="submit">Add</button>
+</form>
+
+{% endblock %}
+
+

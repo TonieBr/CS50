@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <tr><td>{{ data.name }} </td><td>{{ data.price | usd }} {{ data.symbol }}</td></tr>
+{% endblock %}

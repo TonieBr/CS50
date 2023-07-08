@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transaction History
+{% endblock %}
+
+{% block main %}
+<table id = "overview" class="table">
+    <th>Transaction</th><th>Stock</th><th>Price per Stock</th><th>Transaction Amount</th><th>Time</th>
+
+    {% for row in data %}
+    <tr><td><b>{{ row['trant'] }}</b> <td>{{ row['symbol'] }}</td> <td>{{ row['price'] | usd }}</td> <td>{{ row['trana'] }}</td> <td>{{ row['trand'] }} </td> </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}
+
+
