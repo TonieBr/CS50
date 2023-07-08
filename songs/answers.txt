@@ -1,0 +1,5 @@
+Average Energy: 0.66
+Average Danceability: 0.72
+Average Valence: 0.48
+
+Based on the values, the audio aura could be characterized as 'Purple' (or 'passionate' / 'emotional') - based on the combination of low valence with high energy and danceability. The problem with how this has been determined is that it is a simple average of all values and not a weighed average. This could be solved by tracking the number of plays, or multiplying the base value according to rank.
